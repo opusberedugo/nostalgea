@@ -1,0 +1,225 @@
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.black-bg {
+  background-color: #0a0a0d;
+}
+
+.black-red {
+  background-color: #9b1222;
+}
+
+.black-white {
+  background-color: #fcfefd;
+}
+
+.white-bg {
+  background-color: #fcfefd;
+}
+
+.red-bg {
+  background-color: #9b1222;
+}
+
+.hr-dark {
+  width: calc(100% - 50px);
+  height: 1px;
+  margin: 30px 25px;
+  background-color: #fcfefd;
+  box-shadow: 0px 0px 5px 1px #fcfefd;
+}
+
+.white-text {
+  color: #fcfefd;
+}
+
+.centered-text {
+  text-align: center;
+}
+
+.capitalized {
+  text-transform: uppercase;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  font-family: "Avenir Roman";
+  text-decoration: none;
+  transition-duration: 0.2s;
+  outline: none;
+}
+
+nav {
+  background-color: #0a0a0d;
+}
+
+nav {
+  background-color: #0a0a0d;
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+nav svg path {
+  fill: #fcfefd;
+}
+nav .brand {
+  display: flex;
+  align-items: center;
+}
+nav .brand .logo .img {
+  width: 250px;
+}
+nav .brand .logo .img img {
+  width: 100%;
+}
+nav .brand .menu {
+  display: none;
+}
+nav .brand .user {
+  display: none;
+}
+nav .options {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+nav .options a {
+  color: #fcfefd;
+  padding: 20px;
+}
+nav .options a:hover {
+  color: #0a0a0d;
+  background-color: #fcfefd;
+}
+nav .options a:nth-of-type(1) {
+  margin-left: auto;
+}
+nav .options a:last-of-type {
+  padding: 10px 20px;
+}
+nav .options a:last-of-type:hover svg path {
+  fill: #0a0a0d;
+}
+
+section.subscribe {
+  padding: 50px 10px;
+}
+section.subscribe form {
+  display: flex;
+  justify-content: center;
+  padding: 50px 10%;
+}
+section.subscribe form button {
+  display: block;
+  padding: 20px 50px;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+section.subscribe form input {
+  padding: 20px 10px;
+  flex-grow: 1;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+section.advertise {
+  background-image: linear-gradient(120deg, #0a0a0df6, #0a0a0df6), url("../img/backdrop1.png");
+  padding: 150px 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  color: #fcfefd;
+}
+section.advertise h2 {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+section.advertise button {
+  border: none;
+  padding: 30px 70px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+section.advertise button:hover {
+  background-color: #880f1d;
+}
+
+footer .logo {
+  padding: 20px;
+}
+footer .logo .img {
+  margin: 0 auto;
+  width: 280px;
+}
+footer .logo .img img {
+  width: 100%;
+}
+footer .grid {
+  grid-template-columns: repeat(3, 1fr);
+  align-items: start;
+  justify-content: center;
+  justify-items: center;
+}
+footer .grid .column {
+  color: #fcfefd;
+}
+footer .grid .column h3 {
+  text-transform: uppercase;
+  text-align: center;
+}
+footer .grid .column a {
+  display: block;
+  padding: 10px 0;
+  color: #fcfefd;
+  text-align: center;
+}
+footer .grid .column a:hover {
+  text-decoration: underline;
+}
+footer .social {
+  text-align: center;
+  text-transform: uppercase;
+  color: #fcfefd;
+  padding: 20px;
+}
+footer .social h3 {
+  padding: 20px;
+}
+footer .social .links {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+footer .social .links a {
+  border-radius: 5rem;
+  color: #fcfefd;
+  padding: 20px;
+  margin: 0 5px;
+}
+footer .social .links a svg path {
+  fill: #fcfefd;
+}
+footer .social .links a:hover {
+  background-color: #fcfefd;
+}
+footer .social .links a:hover svg path {
+  fill: #0a0a0d;
+}
+footer small {
+  display: block;
+  padding: 20px 0 50px;
+}
+
+/*# sourceMappingURL=main.css.map */
