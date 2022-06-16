@@ -1,0 +1,136 @@
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.black-bg {
+  background-color: #0a0a0d;
+}
+
+.black-red {
+  background-color: #9b1222;
+}
+
+.black-white {
+  background-color: #fcfefd;
+}
+
+.white-bg {
+  background-color: #fcfefd;
+}
+
+.red-bg {
+  background-color: #9b1222;
+}
+
+.black-text {
+  color: #0a0a0d;
+}
+
+.hr-dark {
+  width: calc(100% - 50px);
+  height: 1px;
+  margin: 30px 25px;
+  background-color: #fcfefd;
+  box-shadow: 0px 0px 5px 1px #fcfefd;
+}
+
+.white-text {
+  color: #fcfefd;
+}
+
+.red-text {
+  color: #9b1222;
+}
+
+.white-border {
+  border: 2px #fcfefd solid;
+}
+
+.red-border {
+  border: 2px #fcfefd solid;
+}
+
+.black-border {
+  border: 2px #fcfefd solid;
+}
+
+.centered-text {
+  text-align: center;
+}
+
+.capitalized {
+  text-transform: uppercase;
+}
+
+.borderless {
+  border: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Avenir Roman";
+  text-decoration: none;
+  transition-duration: 0.2s;
+  outline: none;
+}
+
+nav {
+  background-color: #0a0a0d;
+}
+
+.backdrop img {
+  width: 100%;
+}
+
+.casts {
+  padding: 0 20px;
+}
+.casts .cast {
+  margin: 10px 10px 20px 0px;
+}
+
+h1, h2 {
+  margin: 20px;
+}
+
+h2 {
+  margin-bottom: 0px;
+}
+
+p.overview-details {
+  padding: 20px;
+  padding-top: 10px;
+}
+
+@keyframes float {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.row {
+  padding: 5px 0;
+}
+.row button.cta {
+  animation-name: float;
+  animation-iteration-count: infinite;
+  animation-delay: 0;
+  animation-duration: 1.5s;
+  margin: 10px auto;
+  display: block;
+  padding: 20px 40px;
+  border-radius: 10px;
+}
+
+/*# sourceMappingURL=details.css.map */

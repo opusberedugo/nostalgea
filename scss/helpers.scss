@@ -21,6 +21,10 @@
   background-color: $red;
 }
 
+.black-text{
+  color: $black;
+}
+
 .hr-dark{
   width: calc(100% - 50px);
   height: 1px;
@@ -32,10 +36,30 @@
 .white-text{
   color: $white;
 }
+
+.red-text{
+  color: $red;
+}
+
+.white-border{
+  border: 2px $white solid;
+}
+
+.red-border{
+  border: 2px $white solid;
+}
+
+.black-border{
+  border: 2px $white solid;
+}
 .centered-text{
   text-align: center;
 }
 
 .capitalized{
   text-transform: uppercase;
+}
+
+.borderless{
+  border: none;
 }

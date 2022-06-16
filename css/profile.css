@@ -1,0 +1,294 @@
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.black-bg {
+  background-color: #0a0a0d;
+}
+
+.black-red {
+  background-color: #9b1222;
+}
+
+.black-white {
+  background-color: #fcfefd;
+}
+
+.white-bg {
+  background-color: #fcfefd;
+}
+
+.red-bg {
+  background-color: #9b1222;
+}
+
+.black-text {
+  color: #0a0a0d;
+}
+
+.hr-dark {
+  width: calc(100% - 50px);
+  height: 1px;
+  margin: 30px 25px;
+  background-color: #fcfefd;
+  box-shadow: 0px 0px 5px 1px #fcfefd;
+}
+
+.white-text {
+  color: #fcfefd;
+}
+
+.red-text {
+  color: #9b1222;
+}
+
+.white-border {
+  border: 2px #fcfefd solid;
+}
+
+.red-border {
+  border: 2px #fcfefd solid;
+}
+
+.black-border {
+  border: 2px #fcfefd solid;
+}
+
+.centered-text {
+  text-align: center;
+}
+
+.capitalized {
+  text-transform: uppercase;
+}
+
+.borderless {
+  border: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Avenir Roman";
+  text-decoration: none;
+  transition-duration: 0.2s;
+  outline: none;
+}
+
+nav {
+  background-color: #0a0a0d;
+}
+
+body {
+  background-color: #141414;
+}
+
+main.profile {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  padding: 20px;
+  gap: 20px;
+}
+@media all and (max-width: 680px) {
+  main.profile {
+    display: block;
+    padding: 0;
+  }
+}
+main.profile .sidebar {
+  height: 700px;
+  border-radius: 20px;
+}
+@media all and (max-width: 680px) {
+  main.profile .sidebar {
+    border-radius: 0;
+    height: fit-content;
+  }
+}
+main.profile .sidebar .img {
+  padding: 20px 20%;
+}
+@media all and (max-width: 680px) {
+  main.profile .sidebar .img {
+    display: none;
+  }
+}
+main.profile .sidebar .img svg {
+  width: 100%;
+}
+main.profile .sidebar .img svg path {
+  fill: #fcfefd;
+}
+@media all and (max-width: 680px) {
+  main.profile .sidebar .links {
+    display: flex;
+    position: sticky;
+    top: 0;
+    left: 0;
+  }
+}
+main.profile .sidebar .links a {
+  display: flex;
+  padding: 20px 0;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+@media all and (max-width: 680px) {
+  main.profile .sidebar .links a {
+    flex-grow: 1;
+  }
+}
+main.profile .sidebar .links a:hover {
+  text-decoration: underline;
+}
+main.profile .sidebar .links a p {
+  margin-left: 10px;
+  margin-right: auto;
+}
+@media all and (max-width: 400px) {
+  main.profile .sidebar .links a p {
+    display: none;
+  }
+}
+main.profile .sidebar .links a svg {
+  margin-left: auto;
+}
+@media all and (max-width: 400px) {
+  main.profile .sidebar .links a svg {
+    margin: 0 auto;
+  }
+}
+main.profile .sidebar .links a svg path {
+  fill: #fcfefd;
+}
+main.profile .ajax {
+  height: 700px;
+  overflow: scroll;
+  border-radius: 20px;
+  padding: 20px 20px;
+}
+main.profile .ajax::-webkit-scrollbar {
+  display: none;
+}
+@media all and (max-width: 680px) {
+  main.profile .ajax {
+    height: fit-content;
+    padding: 40px 20px;
+    border-radius: 0;
+  }
+}
+@media all and (max-width: 400px) {
+  main.profile .ajax {
+    padding: 10px;
+  }
+}
+main.profile .ajax div.action {
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px #fcfefd solid;
+  padding: 10px;
+  align-items: center;
+}
+main.profile .ajax div.action .action-name {
+  flex-grow: 1;
+  text-align: center;
+}
+main.profile .ajax div.action button {
+  margin-left: auto;
+}
+main.profile .ajax div.action button:hover {
+  background-color: #fcfefd;
+}
+main.profile .ajax div.action button:hover svg path {
+  fill: #0a0a0d;
+}
+main.profile .ajax div.action:hover {
+  transform: scale(1.01);
+}
+main.profile .ajax table {
+  width: 100%;
+}
+main.profile .ajax table thead {
+  border: 1px #fcfefd solid;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+main.profile .ajax table thead th {
+  padding: 40px 20px;
+  margin: 0 10px;
+}
+@media all and (max-width: 470px) {
+  main.profile .ajax table thead th {
+    padding: 40px 10px;
+  }
+}
+@media all and (max-width: 560px) {
+  main.profile .ajax table thead th:nth-of-type(4) {
+    display: none;
+  }
+}
+@media all and (max-width: 470px) {
+  main.profile .ajax table thead th:nth-of-type(2) {
+    display: none;
+  }
+}
+main.profile .ajax table tbody {
+  text-align: center;
+}
+main.profile .ajax table tbody tr td {
+  padding: 20px 0;
+}
+main.profile .ajax table tbody tr td[data-status=complete] {
+  background-color: #024900;
+}
+main.profile .ajax table tbody tr td[data-status=pending] {
+  background-color: #a5a800;
+}
+main.profile .ajax table tbody tr td[data-status=expired] {
+  background-color: #9b1222;
+}
+@media all and (max-width: 560px) {
+  main.profile .ajax table tbody tr td:nth-of-type(4) {
+    display: none;
+  }
+}
+@media all and (max-width: 470px) {
+  main.profile .ajax table tbody tr td:nth-of-type(2) {
+    display: none;
+  }
+}
+main.profile .ajax table tbody tr:hover {
+  transform: scale(1.01);
+}
+main.profile .ajax .coupon-category {
+  background-color: #222222;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+main.profile .ajax .coupon-category .coupon {
+  background-color: #9b1222;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  margin: 20px 0;
+  align-items: center;
+}
+main.profile .ajax .coupon-category .coupon:hover {
+  transform: scale(1.01);
+}
+main.profile .ajax .coupon-category .coupon button {
+  margin-left: auto;
+  padding: 10px 40px;
+  border-radius: 10rem;
+  font-size: 16px;
+}
+
+/*# sourceMappingURL=profile.css.map */

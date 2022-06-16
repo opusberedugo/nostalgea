@@ -7,6 +7,8 @@
   <title>See What's On. Book Movies. Nostalgea Cinemas.</title>
   <link rel="stylesheet" href="./fonts/avenir-cufonfonts-webfont/style.css" />
   <link rel="stylesheet" href="./fonts/montserrat-cufonfonts-webfont/style.css" />
+  <link rel="stylesheet" href="./plugins/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="./plugins/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.css">
   <link rel="stylesheet" href="./css/main.css">
   <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
 </head>
@@ -40,7 +42,7 @@
       <a href="#">Giveaways</a>
       <!-- <a href="#">My Bookings</a> -->
       <a href="#">Bookings</a>
-      <a href="#">            
+      <a href="login.html">            
         <svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 24 24">
           <path d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zM6.023 15.416C7.491 17.606 9.695 19 12.16 19c2.464 0 4.669-1.393 6.136-3.584A8.968 8.968 0 0 0 12.16 13a8.968 8.968 0 0 0-6.137 2.416zM12 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>   
         </svg>
@@ -50,31 +52,45 @@
   </nav>
   <!-- End of navigation -->
 
-  <section class="carousel">
-    <div class="slider"></div>
-  </section>
-
-  <section class="now-showing">
+  <section id="carousel" class="owl-carousel owl-theme">
 
   </section>
+
 
   <section class="black-bg coming-soon">
     <h2 class="white-text">Coming Soon</h2>
-  </section>
+    <div class="movies black">
+      <section id="upcoming-carousel" class="owl-carousel owl-theme">
+        
+      </section><!-- End of Carousel -->
+    </div> <!-- End of movies container -->
+  </section><!-- End of Coming Soon Sections -->
+
+
 
   <section class="advertise">
     <h2>Become a Partner by</h2>
     <button class="red-bg white-text">Advertising with Us</button>
   </section>
+  <!-- End of avertisement Section -->
 
+
+  <section class="exclusive black-bg white-text">
+    <h2>Bookings & Reservations only</h2>
+    <p>Have a private experience with your friends, family or even colleagues. Rent out one of our spaces for your birthdays, events and premieres</p>
+
+    <a href="#" class="button white-bg black-text">CONTACT US NOW</a>
+  </section>
 
   <section class="subscribe black-bg centered-text">
     <h2 class="white-text capitalized">Subscribe</h2>
-    <form action="">
+    <form method="post" action="subscribe">
       <input class="white-bg" type="email" name="email" id="">
       <button class="red-bg white-text">Subscribe</button>
     </form>
   </section>
+
+  
 
   <footer class="black-bg">
     <div class="logo flex">
@@ -139,6 +155,8 @@
     <small class="white-text centered-text">&copy;Nostalgea Cinemas 2022</small>
   </footer>
   <!-- End of footer -->
-  <script src="./script/imdb.js"></script>
+  <script src="./script/jquery-3.6.0.js"></script>
+  <script src="./plugins/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+  <script src="./script/tmdb.js"></script>
 </body>
 </html>

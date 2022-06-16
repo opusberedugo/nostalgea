@@ -1,0 +1,204 @@
+@import "variables";
+@import "helpers";
+@import "media";
+@import "reset";
+
+body{
+  background-color: $grey2
+}
+
+main.profile{
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  padding: 20px ;
+  gap: 20px;
+  @include media-max(680px){
+    display: block;
+    padding: 0;
+  }
+  .sidebar{
+    height: 700px;
+    border-radius: 20px;
+    @include media-max(680px){
+      border-radius: 0;
+      height: fit-content;
+    }
+    .img{
+      padding: 20px 20%;
+      @include media-max(680px){
+        display: none;
+        // padding: 0;
+      }
+      svg{
+        width: 100%;
+        path{
+          fill: $white;
+        }
+      }
+    }
+    .links{
+      @include media-max(680px){
+        display: flex;
+        position: sticky;
+        top: 0;
+        left: 0;
+      }
+      a{
+        display: flex;
+        padding: 20px 0;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        @include media-max(680px){
+          flex-grow: 1;
+        }
+        &:hover{
+          text-decoration: underline;
+        }
+        p{
+          @include media-max(400px){
+            display: none;
+          }
+          margin-left: 10px;
+          margin-right: auto;
+        }
+        svg{
+          margin-left: auto;
+          @include media-max(400px){
+            margin: 0 auto;
+          }
+          path{
+            fill: $white;
+          }
+        }
+      }
+    }
+  }
+  .ajax{
+    &::-webkit-scrollbar{
+      display: none;
+    }
+    
+    height: 700px;
+    overflow: scroll;
+    border-radius: 20px;
+    padding: 20px 20px;
+    @include media-max(680px){
+      height: fit-content;
+      padding: 40px 20px;
+      border-radius: 0;
+    }
+    @include media-max(400px){
+      padding: 10px;
+    }
+    div.action{
+      margin: 10px 0;
+      border-radius: 10px;
+      border: 1px $white solid;
+      padding: 10px;
+      align-items: center;
+      .action-name{
+        flex-grow: 1;
+        text-align: center;
+      }
+      button{
+        margin-left: auto;
+        &:hover{
+          background-color: $white;
+          svg{
+            path{
+              fill: $black;
+            }
+          }
+        }
+      }
+      &:hover{
+        transform: scale(1.01);
+      }
+    }
+    table{
+      width: 100%;
+      thead{
+        border: 1px $white solid;
+        position: sticky;
+        top: 0;
+        left: 0;
+        th{
+          padding: 40px 20px;
+          margin: 0 10px;
+          // border-radius: 5px;
+          
+          @include media-max(470px){
+            // display: none;
+            padding: 40px 10px;
+          }
+          
+          &:nth-of-type(4){
+            @include media-max(560px){
+              display: none;
+            }
+          }
+
+          &:nth-of-type(2){
+            @include media-max(470px){
+              display: none;
+            }
+          }
+        }
+      }
+      tbody{
+        text-align: center;
+        tr{
+          td{
+            padding: 20px 0;
+            &[data-status="complete"]{
+              background-color: $green;
+            }
+            &[data-status="pending"]{
+              background-color: $yellow;
+            }
+            &[data-status="expired"]{
+              background-color: $red;
+            }
+            &:nth-of-type(4){
+              @include media-max(560px){
+                display: none;
+              }
+            }
+            &:nth-of-type(2){
+              @include media-max(470px){
+                display: none;
+              }
+            }
+          }
+          &:hover{
+            transform: scale(1.01);
+          }
+        }
+      }
+    }
+    .coupon-category{
+      background-color: $grey;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px 0;
+      .coupon{
+        background-color: $red;
+        padding: 20px;
+        border-radius: 20px;
+        display: flex;
+        margin: 20px 0;
+        align-items: center;
+        &:hover{
+          transform: scale(1.01);
+        }
+        button{
+          margin-left: auto;
+          padding: 10px 40px;
+          border-radius: 10rem;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

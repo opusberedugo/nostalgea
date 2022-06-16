@@ -1,17 +1,7 @@
 const BASE_URL = "https://imdb-api.com/en/API/Search/";
 const API_KEY = "k_bn94pqmj"
 
-//  fetch pattern base url+api_key+ expression
-
-let theathreMovies = [];
-
-// get in theathre movies
-
-fetch("https://imdb-api.com/en/API/InTheaters/k_bn94pqmj").then((response)=>{
-  console.log(response.json())
-  // return response.json()
-})
-
+const comingSoonSection = document.querySelector("section.coming-soon .movies")
 
 const createComingMovie = (movieObj)=>{
   let movie  = document.createElement("div");
@@ -21,6 +11,7 @@ const createComingMovie = (movieObj)=>{
 
   // add classes to the div
   movie.classList.add("movie");
+  movie.classList.add("white-text");
   movie_name.classList.add("movie_name");
   movie_img_container.classList.add("movie_img_container");
   movie_img.classList.add("movie_img");
@@ -39,8 +30,33 @@ const createComingMovie = (movieObj)=>{
   // append movie name to parent
   movie.append(movie_name);
 
+  return movie
 
 }
+
+//  fetch pattern base url+api_key+ expression
+
+let theathreMovies = [];
+
+// get in theathre movies
+
+fetch("https://imdb-api.com/en/API/InTheaters/k_bn94pqmj").then((response)=>{
+  // console.log(response.json())
+  return response.json()
+}).then((data)=>{
+  console.logdata
+  theathreMovies = [...data.items]
+})
+.then(()=>{
+  console.log(theathreMovies);
+}).then(()=>{
+  theathreMovies.forEach((m)=>{
+    comingSoonSection.append(createComingMovie(m));
+  })
+})
+
+
+
 
 const comingSection = ()=>{
 

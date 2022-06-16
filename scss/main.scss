@@ -8,6 +8,9 @@ nav{
   display: flex;
   align-items: center;
   align-content: center;
+  @include media-max(765px){
+    display: block;
+  }
   svg{
     path{
       fill: $white;
@@ -16,31 +19,54 @@ nav{
   .brand{
     display: flex;
     align-items: center;
-    @include media-max(970px){
-      // css
-    }
+    
     .logo{
+      @include media-max(600px){
+        padding: 5px 0;
+      }
       .img{
         width: 250px;
+        @include media-max(600px){
+          width: 180px;
+        }
         img{
           width: 100%;
         }
       }
+      
     }
     .menu{
       display: none;
+      @include media-max(765px){
+        display: block;
+        margin-right: 10px;
+      }
+      button{
+        background-color: $black;
+        border: none;
+      }
     }
     .user{
       display: none;
+      @include media-max(765px){
+        display: block;
+        margin:0 10px 0  auto;
+      }
     }
   }
   .options{
+    @include media-max(765px){
+      display: none;
+    }
     flex-grow: 1;
     display: flex;
     align-items: center;
     a{
       color: $white;
       padding: 20px;
+      @include media-max(765px){
+        display: block;
+      }
       &:hover{
         color: $black;
         background-color: $white;
@@ -50,6 +76,9 @@ nav{
       }
       &:last-of-type{
         padding: 10px 20px;
+        @include media-max(765px){
+          display: none;
+        }
         &:hover{
           svg{
             path{
@@ -62,6 +91,159 @@ nav{
   }
 }
 
+nav.login{
+  display: flex;
+  padding: 10px;
+  a{
+    display: block;
+    padding: 20px;
+    &:last-of-type{
+      margin-left: auto;
+    }
+    &:hover{
+      color: $black;
+      background-color: $white;
+      svg{
+        path{
+          fill: $black;
+        }
+      }
+    }
+  }
+}
+
+#carousel{
+  display: flex;
+  .movie{
+    display: flex;
+    flex-direction: column;
+    background-size: 100VW;
+    padding: 50px;
+    background-repeat: no-repeat;
+    height: 500px;
+    @include media-max(887px){
+      background-size: cover;
+    }
+    .details{
+      margin-top: auto;
+    }
+    .title{
+      font-weight: 500;
+      font-size: 30px;
+      margin: 10px 0;
+    }
+    .overview{
+      margin: 10px 0;
+    }
+    .cta{
+      padding: 25px 50px;
+      border-radius: 2rem;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+  }
+}
+
+main.login , main.signup{
+  button{
+    padding: 20px 40px;
+    border-radius: 5px;
+    display: block;
+    width: 300px;
+    margin: 20px calc((100% - 300px) / 2);
+  }
+}
+
+section.coming-soon{
+  h2{
+    padding: 20px 10px;
+    font-size: 32px;
+  }
+}
+
+main.schedule{
+  h1{
+    margin: 60px 0;
+  }
+  padding: 0 5%;
+  .movie{
+    border: 2px $white solid;
+    border-radius: 10px;
+    align-items: center;
+    text-align: center;
+    .date{
+      flex-grow:1;
+      padding: 20px 0;
+    }
+    .name{
+      flex-grow:3;
+      padding: 20px 0;
+    }
+    .time{
+      padding: 20px 0;
+      flex-grow:2;
+    }
+    button{
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      padding: 20px 0;
+      flex-grow:1;
+      &:hover{
+        background-color: $white;
+        svg{
+          path{
+            fill: $black;
+          }
+        }
+      }
+    }
+  }
+}
+
+#upcoming-carousel{
+  .movie{
+    margin: 0 10px;
+    display: block;
+    p{
+      margin: 10px 0;
+    }
+    a{
+      padding: 10px 20px ;
+      display: block;
+      margin: 10px 0;
+      width: fit-content;
+      border-radius: 20px;
+    }
+    &:hover{
+      transform: scale(1.01);
+    }
+  }
+}
+
+section.filter{
+  form{
+    padding: 0 5%;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    h2{
+      margin-left: auto;
+      margin-right: 20px;
+    }
+    input{
+      flex-grow: 1;
+      display: block;
+      padding: 10px 5px;
+      font-size: 18px;
+      margin: 0 5px;
+      border-radius: 5px;
+      &:last-of-type{
+        padding: 12px 2px;
+      }
+    }
+  }
+}
+
 section.subscribe{
   // text-align: center;
   padding: 50px 10px;
@@ -69,32 +251,45 @@ section.subscribe{
     display: flex;
     justify-content: center;
     padding: 50px 10% ;
+    @include media-max(440px){
+      display: block;
+    }
     button{
       display: block;
-      padding: 20px 50px;
+      padding: 10px 50px;
       border: none;
       font-size: 16px;
       border-radius: 5px;
       margin-left: 20px;
+      @include media-max(440px){
+        width: 100%;
+        margin: 10px 0;
+      }
     }
     input{
-      padding: 20px 10px;
+      padding: 10px 10px;
       flex-grow: 1;
       border: none;
       font-size: 16px;
       border-radius: 5px;
+      display: block;
+      border-radius: 5px;
+      @include media-max(440px){
+        width: 100%;
+      }
     }
   }  
 }
 section.advertise{
-  background-image: linear-gradient(120deg, $transparent-black, $transparent-black),url("../img/backdrop1.png");
+  // background-image: linear-gradient(120deg, $transparent-black, $transparent-black),url("../img/backdrop1.png");
+  background-image:linear-gradient(120deg, $transparent-black, $transparent-black), url("../img/newsletter-bg.png");
   padding: 150px 20px;
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
   color: $white;
   h2{
-    text-transform: uppercase;
+    text-transform: uppercase; 
     margin-bottom:20px;
     font-size: 32px;
   }
@@ -108,6 +303,80 @@ section.advertise{
     }
   }
 }
+
+section.contact.hero{
+  background-image:linear-gradient(120deg, $transparent-black, $transparent-black), url("../img/contact-drop.png");
+  padding: 200px 20px;
+  h1{
+    font-size: 4rem;
+  }
+  p{
+    font-size: 16px;
+  }
+}
+
+section.contact{
+  grid-template-columns: 7fr 3fr;
+  section.handles{
+    padding: 50px;
+    text-transform: uppercase;
+    
+    h2:nth-of-type(2){
+      margin-top: 20px;
+    }
+    a:hover{
+      text-decoration: underline;
+    }
+
+  }
+  form{
+    padding: 50px;
+    input{
+      width: 100%;
+      display: block;
+      border-width: 1px;
+      padding: 15px ;
+      margin: 10px 0;
+      font-size: 16px;
+      border-radius: 10px;
+    }
+    button{
+      display: block;
+      width: 100%;
+      padding: 15px;
+      font-size: 16px;
+      border-radius: 10px;
+    }
+    textarea{
+      display: block;
+      width: 100%;
+      height: 200px;
+      padding: 15px;
+      margin: 10px 0;
+      font-size: 16px;
+      border-radius: 10px;
+      resize: none;
+    }
+  }
+}
+
+section.exclusive{
+  padding: 100px 20px;
+  background-image: url("../img/newsletter-bg.png");
+  background-size: 100vw;
+  background-repeat: no-repeat;
+  .button{
+    padding: 20px 30px;
+    width: fit-content;
+    display: block;
+    margin: 40px 0;
+    border-radius: 3rem;
+    &:hover{
+      background-color: $white2;
+    }
+  }
+}
+
 footer{
   .logo{
     padding: 20px;
@@ -124,6 +393,10 @@ footer{
     align-items: start;
     justify-content: center;
     justify-items: center;
+    @include media-max(765px){
+      grid-template-columns: 1fr;
+      gap: 50px;
+    }
     .column{
       color: $white;
       h3{

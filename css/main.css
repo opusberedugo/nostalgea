@@ -26,6 +26,10 @@
   background-color: #9b1222;
 }
 
+.black-text {
+  color: #0a0a0d;
+}
+
 .hr-dark {
   width: calc(100% - 50px);
   height: 1px;
@@ -38,6 +42,22 @@
   color: #fcfefd;
 }
 
+.red-text {
+  color: #9b1222;
+}
+
+.white-border {
+  border: 2px #fcfefd solid;
+}
+
+.red-border {
+  border: 2px #fcfefd solid;
+}
+
+.black-border {
+  border: 2px #fcfefd solid;
+}
+
 .centered-text {
   text-align: center;
 }
@@ -46,10 +66,14 @@
   text-transform: uppercase;
 }
 
+.borderless {
+  border: none;
+}
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: 0;
+  box-sizing: border-box;
   font-family: "Avenir Roman";
   text-decoration: none;
   transition-duration: 0.2s;
@@ -66,6 +90,11 @@ nav {
   align-items: center;
   align-content: center;
 }
+@media all and (max-width: 765px) {
+  nav {
+    display: block;
+  }
+}
 nav svg path {
   fill: #fcfefd;
 }
@@ -73,8 +102,18 @@ nav .brand {
   display: flex;
   align-items: center;
 }
+@media all and (max-width: 600px) {
+  nav .brand .logo {
+    padding: 5px 0;
+  }
+}
 nav .brand .logo .img {
   width: 250px;
+}
+@media all and (max-width: 600px) {
+  nav .brand .logo .img {
+    width: 180px;
+  }
 }
 nav .brand .logo .img img {
   width: 100%;
@@ -82,17 +121,43 @@ nav .brand .logo .img img {
 nav .brand .menu {
   display: none;
 }
+@media all and (max-width: 765px) {
+  nav .brand .menu {
+    display: block;
+    margin-right: 10px;
+  }
+}
+nav .brand .menu button {
+  background-color: #0a0a0d;
+  border: none;
+}
 nav .brand .user {
   display: none;
+}
+@media all and (max-width: 765px) {
+  nav .brand .user {
+    display: block;
+    margin: 0 10px 0 auto;
+  }
 }
 nav .options {
   flex-grow: 1;
   display: flex;
   align-items: center;
 }
+@media all and (max-width: 765px) {
+  nav .options {
+    display: none;
+  }
+}
 nav .options a {
   color: #fcfefd;
   padding: 20px;
+}
+@media all and (max-width: 765px) {
+  nav .options a {
+    display: block;
+  }
 }
 nav .options a:hover {
   color: #0a0a0d;
@@ -104,8 +169,156 @@ nav .options a:nth-of-type(1) {
 nav .options a:last-of-type {
   padding: 10px 20px;
 }
+@media all and (max-width: 765px) {
+  nav .options a:last-of-type {
+    display: none;
+  }
+}
 nav .options a:last-of-type:hover svg path {
   fill: #0a0a0d;
+}
+
+nav.login {
+  display: flex;
+  padding: 10px;
+}
+nav.login a {
+  display: block;
+  padding: 20px;
+}
+nav.login a:last-of-type {
+  margin-left: auto;
+}
+nav.login a:hover {
+  color: #0a0a0d;
+  background-color: #fcfefd;
+}
+nav.login a:hover svg path {
+  fill: #0a0a0d;
+}
+
+#carousel {
+  display: flex;
+}
+#carousel .movie {
+  display: flex;
+  flex-direction: column;
+  background-size: 100VW;
+  padding: 50px;
+  background-repeat: no-repeat;
+  height: 500px;
+}
+@media all and (max-width: 887px) {
+  #carousel .movie {
+    background-size: cover;
+  }
+}
+#carousel .movie .details {
+  margin-top: auto;
+}
+#carousel .movie .title {
+  font-weight: 500;
+  font-size: 30px;
+  margin: 10px 0;
+}
+#carousel .movie .overview {
+  margin: 10px 0;
+}
+#carousel .movie .cta {
+  padding: 25px 50px;
+  border-radius: 2rem;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+main.login button, main.signup button {
+  padding: 20px 40px;
+  border-radius: 5px;
+  display: block;
+  width: 300px;
+  margin: 20px calc((100% - 300px) / 2);
+}
+
+section.coming-soon h2 {
+  padding: 20px 10px;
+  font-size: 32px;
+}
+
+main.schedule {
+  padding: 0 5%;
+}
+main.schedule h1 {
+  margin: 60px 0;
+}
+main.schedule .movie {
+  border: 2px #fcfefd solid;
+  border-radius: 10px;
+  align-items: center;
+  text-align: center;
+}
+main.schedule .movie .date {
+  flex-grow: 1;
+  padding: 20px 0;
+}
+main.schedule .movie .name {
+  flex-grow: 3;
+  padding: 20px 0;
+}
+main.schedule .movie .time {
+  padding: 20px 0;
+  flex-grow: 2;
+}
+main.schedule .movie button {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 20px 0;
+  flex-grow: 1;
+}
+main.schedule .movie button:hover {
+  background-color: #fcfefd;
+}
+main.schedule .movie button:hover svg path {
+  fill: #0a0a0d;
+}
+
+#upcoming-carousel .movie {
+  margin: 0 10px;
+  display: block;
+}
+#upcoming-carousel .movie p {
+  margin: 10px 0;
+}
+#upcoming-carousel .movie a {
+  padding: 10px 20px;
+  display: block;
+  margin: 10px 0;
+  width: fit-content;
+  border-radius: 20px;
+}
+#upcoming-carousel .movie:hover {
+  transform: scale(1.01);
+}
+
+section.filter form {
+  padding: 0 5%;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+section.filter form h2 {
+  margin-left: auto;
+  margin-right: 20px;
+}
+section.filter form input {
+  flex-grow: 1;
+  display: block;
+  padding: 10px 5px;
+  font-size: 18px;
+  margin: 0 5px;
+  border-radius: 5px;
+}
+section.filter form input:last-of-type {
+  padding: 12px 2px;
 }
 
 section.subscribe {
@@ -116,24 +329,42 @@ section.subscribe form {
   justify-content: center;
   padding: 50px 10%;
 }
+@media all and (max-width: 440px) {
+  section.subscribe form {
+    display: block;
+  }
+}
 section.subscribe form button {
   display: block;
-  padding: 20px 50px;
+  padding: 10px 50px;
   border: none;
   font-size: 16px;
   border-radius: 5px;
   margin-left: 20px;
 }
+@media all and (max-width: 440px) {
+  section.subscribe form button {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
 section.subscribe form input {
-  padding: 20px 10px;
+  padding: 10px 10px;
   flex-grow: 1;
   border: none;
   font-size: 16px;
   border-radius: 5px;
+  display: block;
+  border-radius: 5px;
+}
+@media all and (max-width: 440px) {
+  section.subscribe form input {
+    width: 100%;
+  }
 }
 
 section.advertise {
-  background-image: linear-gradient(120deg, #0a0a0df6, #0a0a0df6), url("../img/backdrop1.png");
+  background-image: linear-gradient(120deg, #0a0a0df6, #0a0a0df6), url("../img/newsletter-bg.png");
   padding: 150px 20px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -155,6 +386,77 @@ section.advertise button:hover {
   background-color: #880f1d;
 }
 
+section.contact.hero {
+  background-image: linear-gradient(120deg, #0a0a0df6, #0a0a0df6), url("../img/contact-drop.png");
+  padding: 200px 20px;
+}
+section.contact.hero h1 {
+  font-size: 4rem;
+}
+section.contact.hero p {
+  font-size: 16px;
+}
+
+section.contact {
+  grid-template-columns: 7fr 3fr;
+}
+section.contact section.handles {
+  padding: 50px;
+  text-transform: uppercase;
+}
+section.contact section.handles h2:nth-of-type(2) {
+  margin-top: 20px;
+}
+section.contact section.handles a:hover {
+  text-decoration: underline;
+}
+section.contact form {
+  padding: 50px;
+}
+section.contact form input {
+  width: 100%;
+  display: block;
+  border-width: 1px;
+  padding: 15px;
+  margin: 10px 0;
+  font-size: 16px;
+  border-radius: 10px;
+}
+section.contact form button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+section.contact form textarea {
+  display: block;
+  width: 100%;
+  height: 200px;
+  padding: 15px;
+  margin: 10px 0;
+  font-size: 16px;
+  border-radius: 10px;
+  resize: none;
+}
+
+section.exclusive {
+  padding: 100px 20px;
+  background-image: url("../img/newsletter-bg.png");
+  background-size: 100vw;
+  background-repeat: no-repeat;
+}
+section.exclusive .button {
+  padding: 20px 30px;
+  width: fit-content;
+  display: block;
+  margin: 40px 0;
+  border-radius: 3rem;
+}
+section.exclusive .button:hover {
+  background-color: #ecf3f0;
+}
+
 footer .logo {
   padding: 20px;
 }
@@ -170,6 +472,12 @@ footer .grid {
   align-items: start;
   justify-content: center;
   justify-items: center;
+}
+@media all and (max-width: 765px) {
+  footer .grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
 }
 footer .grid .column {
   color: #fcfefd;
